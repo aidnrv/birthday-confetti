@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+  <div class="banner">
+    <h1>🎉 Happy Birthday 🎉</h1>
+    <button id="startBtn">Celebrate</button>
+  </div>
+
+  <div id="surprise" class="hidden">
+    <h2>🎶 Ready for some apne wale gaane jo bas humare hain? 🎶</h2>
+    <button id="lessgo">Lessgo 🚀</button>
+  </div>
+
+  <div id="playlist" class="hidden">
+    <h2>💖 Our Special Playlist 💖</h2>
+    <img src="images/spotify-qr.png" alt="Spotify QR" class="qr">
+    <img src="images/photo.jpg" alt="Our Photo" class="photo">
+  </div>
+
+  <script>
+    const startBtn = document.getElementById("startBtn");
+    const surprise = document.getElementById("surprise");
+    const lessgo = document.getElementById("lessgo");
+    const playlist = document.getElementById("playlist");
+
+    function launchConfetti() {
+      confetti({
+        particleCount: 200,
+        spread: 90,
+        origin: { y: 0.6 }
+      });
+    }
+
+    startBtn.onclick = () => {
+      document.querySelector(".banner").style.display = "none";
+      surprise.classList.remove("hidden");
+      launchConfetti();
+    };
+
+    lessgo.onclick = () => {
+      surprise.style.display = "none";
+      playlist.classList.remove("hidden");
+      launchConfetti();
+    };
+  </script>
+</body>
+</html>

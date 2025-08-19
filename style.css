@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #ffafbd, #ffc3a0);
+  text-align: center;
+  color: #333;
+}
+
+.banner, #surprise, #playlist {
+  padding: 50px;
+}
+
+button {
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #ff4081;
+  color: white;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #e91e63;
+}
+
+.hidden {
+  display: none;
+}
+
+.qr {
+  width: 200px;
+  margin: 20px auto;
+  display: block;
+}
+
+.photo {
+  width: 300px;
+  margin-top: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
